@@ -1,0 +1,3 @@
+version=3
+
+ftp://ftp.kde.org/pub/kde/stable/massif-visualizer/([\d\.]+)/src/massif-visualizer-([\d\.]+).tar.bz2

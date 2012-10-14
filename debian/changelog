@@ -1,0 +1,12 @@
+massif-visualizer (0.3-0ubuntu2) quantal; urgency=low
+
+  * Add debian/patches/fix_double_qreal_mismatch to fix FTBFS on armhf and
+    armel
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 14 Oct 2012 02:11:21 -0400
+
+massif-visualizer (0.3-0ubuntu1) precise; urgency=low
+
+  * Initial release (LP: #893569)
+
+ -- Aurélien Gâteau <aurelien.gateau@ubuntu.com>  Thu, 08 Dec 2011 18:07:17 +0100

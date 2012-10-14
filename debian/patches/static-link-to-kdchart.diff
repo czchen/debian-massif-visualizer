@@ -1,0 +1,20 @@
+Description: Link statically to the kdchart lib
+ The lib cannot be reused outside Massif Visualizer as is, so better link it in
+Author: Aurélien Gâteau <aurelien.gateau@ubuntu.com>
+Applied-Upstream: commit:997104164abaf7cd635b18e87bfb02c41af134a2
+Index: massif-visualizer-0.3~b9f02dd8/kdchart/src/CMakeLists.txt
+===================================================================
+--- massif-visualizer-0.3~b9f02dd8.orig/kdchart/src/CMakeLists.txt	2011-11-02 14:19:23.000000000 +0100
++++ massif-visualizer-0.3~b9f02dd8/kdchart/src/CMakeLists.txt	2011-11-14 11:22:17.000000000 +0100
+@@ -112,10 +112,7 @@
+ 
+ qt_wrap_cpp(mv-kdchart kdchart_LIB_SRCS KDChartEnums.h)
+ 
+-kde4_add_library(mv-kdchart SHARED ${kdchart_LIB_SRCS})
++kde4_add_library(mv-kdchart STATIC ${kdchart_LIB_SRCS})
+ 
+ #target_link_libraries(kdchart ${QT_QT3SUPPORT_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTCORE_LIBRARY} ${ZLIB_LIBRARY} )
+ target_link_libraries(mv-kdchart  ${QT_QTSVG_LIBRARY} ${QT_QTXML_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTCORE_LIBRARY} ${ZLIB_LIBRARY} )
+-
+-set_target_properties(mv-kdchart PROPERTIES VERSION 0.0.1 SOVERSION 0.0.1 )
+-install(TARGETS mv-kdchart  ${INSTALL_TARGETS_DEFAULT_ARGS})

@@ -1,0 +1,17 @@
+Upstreamed at https://bugs.kde.org/show_bug.cgi?id=308357
+Scott Kitterman, Oct 14, 2012
+Index: massif-visualizer-0.3/kdchart/src/KDChartStackedPlotter_p.cpp
+===================================================================
+--- massif-visualizer-0.3.orig/kdchart/src/KDChartStackedPlotter_p.cpp	2011-11-06 17:45:56.000000000 -0500
++++ massif-visualizer-0.3/kdchart/src/KDChartStackedPlotter_p.cpp	2012-10-14 02:06:56.383367363 -0400
+@@ -83,8 +83,8 @@
+             // take in account all stacked values
+             yMin = qMin( qMin( yMin, negativeStackedValues ), stackedValues );
+             yMax = qMax( qMax( yMax, negativeStackedValues ), stackedValues );
+-            xMin = qMin( xMin, xPoint.key );
+-            xMax = qMax( xMax, xPoint.key );
++            xMin = qMin( qreal(xMin), xPoint.key );
++            xMax = qMax( qreal(xMax), xPoint.key );
+         }
+     }
+ 

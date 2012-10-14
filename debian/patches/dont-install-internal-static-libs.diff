@@ -1,0 +1,23 @@
+Description: Do not install internal static libs
+Author: Aurélien Gâteau <aurelien.gateau@ubuntu.com>
+Applied-Upstream: commit:db83980f934bc4b4267b76af8dd0400b2a37ac26
+Index: massif-visualizer-0.3~b9f02dd8/massifdata/CMakeLists.txt
+===================================================================
+--- massif-visualizer-0.3~b9f02dd8.orig/massifdata/CMakeLists.txt	2011-11-02 14:19:23.000000000 +0100
++++ massif-visualizer-0.3~b9f02dd8/massifdata/CMakeLists.txt	2011-11-14 11:22:47.000000000 +0100
+@@ -16,4 +16,3 @@
+ target_link_libraries(mv-massifdata
+     ${QT_QTCORE_LIBRARY}
+ )
+-install(TARGETS mv-massifdata ${INSTALL_TARGETS_DEFAULT_ARGS})
+\ Pas de fin de ligne à la fin du fichier.
+Index: massif-visualizer-0.3~b9f02dd8/visualizer/CMakeLists.txt
+===================================================================
+--- massif-visualizer-0.3~b9f02dd8.orig/visualizer/CMakeLists.txt	2011-11-02 14:19:23.000000000 +0100
++++ massif-visualizer-0.3~b9f02dd8/visualizer/CMakeLists.txt	2011-11-14 11:23:02.000000000 +0100
+@@ -21,4 +21,3 @@
+     ${QT_QTGUI_LIBRARY}
+     ${KDE4_KDECORE_LIBS}
+ )
+-install(TARGETS mv-visualizer ${INSTALL_TARGETS_DEFAULT_ARGS})
+\ Pas de fin de ligne à la fin du fichier.

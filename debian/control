@@ -1,0 +1,20 @@
+Source: massif-visualizer
+Section: devel
+Priority: extra
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+XSBC-Original-Maintainer: Aurélien Gâteau <aurelien.gateau@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), cmake, kgraphviewer (>= 2.1), kdelibs5-dev, pkg-kde-tools, python-docutils
+Standards-Version: 3.9.2
+Homepage: https://projects.kde.org/projects/extragear/sdk/massif-visualizer
+
+Package: massif-visualizer
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: valgrind, kgraphviewer
+Description: Tool for visualizing memory usage recorded by Valgrind Massif
+ Massif Visualizer is a graphical interface to visualize memory usage recorded
+ by Valgrind Massif tool.
+ .
+ Run your application in Valgrind with --tool=massif and then open the
+ generated massif.out.%pid in the visualizer. Gzip or Bzip2 compressed Massif
+ files can also be opened transparently.

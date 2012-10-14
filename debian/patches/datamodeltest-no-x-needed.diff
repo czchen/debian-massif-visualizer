@@ -1,0 +1,16 @@
+Description: Do not require an X server to run datamodeltest
+Author: Aurélien Gâteau <aurelien.gateau@ubuntu.com>
+Applied-Upstream: commit:b17bca220111f87651ad8559e8533a4f07c2803e
+Index: massif-visualizer-0.3~b9f02dd8/test/datamodeltest.cpp
+===================================================================
+--- massif-visualizer-0.3~b9f02dd8.orig/test/datamodeltest.cpp	2011-11-14 11:09:58.000000000 +0100
++++ massif-visualizer-0.3~b9f02dd8/test/datamodeltest.cpp	2011-11-14 11:11:40.000000000 +0100
+@@ -39,7 +39,7 @@
+ #include <KConfigGroup>
+ #include <qtest_kde.h>
+ 
+-QTEST_KDEMAIN(DataModelTest, GUI)
++QTEST_KDEMAIN(DataModelTest, NoGUI)
+ 
+ using namespace Massif;
+ 

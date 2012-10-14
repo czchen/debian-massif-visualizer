@@ -1,0 +1,5 @@
+datamodeltest-no-x-needed.diff
+static-link-to-kdchart.diff
+dont-install-internal-static-libs.diff
+fix-licensing.diff
+fix_double_qreal_mismatch
