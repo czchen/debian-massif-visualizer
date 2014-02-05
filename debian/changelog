@@ -1,3 +1,11 @@
+massif-visualizer (0.3-1) UNRELEASED; urgency=medium
+
+  * Backport ubuntu package (Closes: #602690)
+  * Bump Standard-Version to 3.9.5
+  * Bump compat level to 9
+
+ -- ChangZhuo Chen (陳昌倬) <czchen@gmail.com>  Wed, 05 Feb 2014 23:55:24 +0800
+
 massif-visualizer (0.3-0ubuntu2) quantal; urgency=low
 
   * Add debian/patches/fix_double_qreal_mismatch to fix FTBFS on armhf and

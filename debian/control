@@ -1,10 +1,15 @@
 Source: massif-visualizer
 Section: devel
 Priority: extra
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-XSBC-Original-Maintainer: Aurélien Gâteau <aurelien.gateau@ubuntu.com>
-Build-Depends: debhelper (>= 8.0.0), cmake, kgraphviewer (>= 2.1), kdelibs5-dev, pkg-kde-tools, python-docutils
-Standards-Version: 3.9.2
+Maintainer: ChangZhuo Chen (陳昌倬) <czchen@gmail.com>
+Build-Depends:
+ debhelper (>= 9),
+ cmake,
+ libkgraphviewer-dev (>= 2.1),
+ kdelibs5-dev,
+ pkg-kde-tools,
+ python-docutils
+Standards-Version: 3.9.5
 Homepage: https://projects.kde.org/projects/extragear/sdk/massif-visualizer
 
 Package: massif-visualizer
