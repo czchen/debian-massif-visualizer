@@ -1,0 +1,49 @@
+ChangeLog for massif-visualizer v0.3
+====================================
+
+* Christoph Feck: backport from master: compile with Qt 4.7
+* Michael Jansen: backport from master: Qt 4.8: Resolve ambiguous overload (QVariant, QBrush)
+* Milian Wolff: bump version to 0.3
+* Milian Wolff: add .desktop file
+* Milian Wolff: update viewport instead of listview
+* Milian Wolff: don't assert when updating peaks when a function is hidden
+* Milian Wolff: fix default tab when starting
+* Milian Wolff: add toolbar action to toggle shortened templates
+* Milian Wolff: remove doubled margins
+* Milian Wolff: make it possible to shorten identifiers of template instantiations by removing the template arguments (configurable)
+* Milian Wolff: properly escape data in html tooltips, fixes template function displayment
+* Milian Wolff: merge columns in DataTreeModel to minimize wasted space
+* Milian Wolff: when massif gets terminated (^C) the peak data might be off, so find it ourselves
+* Milian Wolff: cleanup UI when we installed with kgraphviewer but it's not available at runtime
+* Milian Wolff: fix compile time warning
+* Milian Wolff: display button to open data file when nothing is displayed
+* Milian Wolff: fix build when kgraphviewer was not available
+* Pino Toscano: fixuifiles
+* Milian Wolff: fix test
+* Milian Wolff: implement hiding of functions (bands) in the graph via context menu
+* Milian Wolff: only connect once to m_chart ctx menu signal
+* Milian Wolff: beautify tree leaf item tooltips
+* Milian Wolff: make precision of memory costs configurable, keep default at 1
+* Milian Wolff: make it possible to mark function as custom allocator from chart context menu
+* Milian Wolff: don't crash when removing coordinate plane in mouseclick event (e.g. custom context menu)
+* Milian Wolff: fix functionInLabel for functions with funcptrs
+* Milian Wolff: don't rely on recentFiles action to reload current file, it was buggy
+* Milian Wolff: don't leak axis of detailed diagram
+* Milian Wolff: properly strip file location from functions without arguments, e.g. malloc functions
+* Milian Wolff: properly resort children when we encounter custom allocators and merge the below threshold items
+* Milian Wolff: optimize: don't rebuilt dot graph on same item again and again, don't build dot graph for total-cost data items
+* Milian Wolff: basic support for custom allocators
+* Milian Wolff: don't leak diagrams, fix bug in KDChart::Legend::removeDiagrams
+* Milian Wolff: don't crash on massif files without any snapshots or without any detailed snapshots
+* Milian Wolff: make it possible to re-add the data tree dock widget via the menu
+* Pino Toscano: fixuifiles
+* Pino Toscano: i18n: properly CamelCase some strings
+* Milian Wolff: add myself as copyright holder
+* Milian Wolff: cleanup FindKGraphViewer.cmake as suggested by Raphael Kubo da Costa
+* Milian Wolff: remove file
+* Milian Wolff: introduce application/x-valgrind-massif mimetype for massif.out files and reuse it
+* Albert Astals Cid: Remove useless i18n
+* Milian Wolff: guard against badly loaded kgraphviewer libs
+* Milian Wolff: fix: disable actions when no file is loaded, prevents crashes
+* Milian Wolff: prefix installed libs with mv- to prevent clashes
+* Milian Wolff: don't crash on parse error
